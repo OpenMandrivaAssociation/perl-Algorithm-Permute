@@ -1,33 +1,26 @@
+%define upstream_name    Algorithm-Permute
+%define upstream_version 0.12
 
-%define realname   Algorithm-Permute
-%define version    0.12
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Handy and fast permutation with OO interface
-Source:     http://www.cpan.org/modules/by-module/Algorithm/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl-devel
-
-
-
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This handy module makes performing permutation in Perl easy and fast,
 although perhaps its algorithm is not the fastest on the earth. It supports
 permutation r of n objects where 0 < r <= n. 
 
-
-
-
-
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -48,5 +41,3 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
