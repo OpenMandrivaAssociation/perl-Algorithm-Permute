@@ -41,3 +41,32 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.120.0-5
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Sat May 28 2011 Funda Wang <fwang@mandriva.org> 0.120.0-4
++ Revision: 680448
+- mass rebuild
+
+* Tue Jul 20 2010 Sandro Cazzaniga <kharec@mandriva.org> 0.120.0-3mdv2011.0
++ Revision: 555417
+- rebuild
+
+* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.120.0-2mdv2010.0
++ Revision: 405952
+- force rebuild
+- rebuild using %%perl_convert_version
+- fixed license field
+
+* Fri Feb 20 2009 Jérôme Quelin <jquelin@mandriva.org> 0.12-1mdv2009.1
++ Revision: 343337
+- import perl-Algorithm-Permute
+
+
+* Fri Feb 20 2009 cpan2dist 0.12-1mdv
+- initial mdv release, generated with cpan2dist
+
