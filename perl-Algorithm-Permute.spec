@@ -8,7 +8,7 @@ Release:	7
 Summary:    Handy and fast permutation with OO interface
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
+Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl-devel
