@@ -1,15 +1,13 @@
 %define upstream_name    Algorithm-Permute
-%define upstream_version 0.17
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    0.17
+Release:	2
 
 Summary:    Handy and fast permutation with OO interface
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/iynehz/perl5-Algorithm-Permute
-Source0:    https://cpan.metacpan.org/authors/id/S/SL/SLOYD/Algorithm-Permute-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/S/SL/SLOYD/Algorithm-Permute-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
@@ -21,7 +19,7 @@ although perhaps its algorithm is not the fastest on the earth. It supports
 permutation r of n objects where 0 < r <= n. 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -60,8 +58,7 @@ rm -rf %buildroot
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.120.0-2mdv2010.0
 + Revision: 405952
 - force rebuild
-- rebuild using %%perl_convert_version
-- fixed license field
+- rebuild using %0.17 fixed license field
 
 * Fri Feb 20 2009 Jérôme Quelin <jquelin@mandriva.org> 0.12-1mdv2009.1
 + Revision: 343337
